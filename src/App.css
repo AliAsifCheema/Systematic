@@ -389,6 +389,19 @@ footer h1::before {
   box-shadow: none;
 }
 
+@media (max-width: 400) {
+  .sys-head .sys-title h1 {
+    font-size: 54px;
+  }
+  .sys-head .sys-title h2 {
+    font-size: 40px;
+  }
+
+  .huge-title span {
+    font-size: 62px;
+  }
+}
+
 @media (max-width: 768px) {
   footer h1::before {
     margin-top: 15px;

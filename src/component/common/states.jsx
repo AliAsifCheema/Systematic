@@ -224,7 +224,7 @@ const main_content = {
     h2: "TITLE HERE",
     link: { title: "Read More", href: "#readmore" },
     paragraph:
-      "Cursuspenatisaccum ut curabitur nulla tellus tor ames a in curabitur pede.Idet mollisi eros dis orci congue elis et curabitur consequam intesque.Curabiturpisametur in ante.",
+      "Cursus penatisa ccum ut curabitur nulla tellus tor ames a in curabitur pede.Idet mollisi eros dis orci congue elis et curabitur consequam intesque.Cura bit urpis ametur in ante.",
   },
 };
 export function MainContent() {
