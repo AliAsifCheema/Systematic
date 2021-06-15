@@ -389,16 +389,18 @@ footer h1::before {
   box-shadow: none;
 }
 
-@media (max-width: 400) {
+@media (max-width: 400px) {
   .sys-head .sys-title h1 {
     font-size: 54px;
   }
   .sys-head .sys-title h2 {
     font-size: 40px;
   }
-
   .huge-title span {
     font-size: 62px;
+  }
+  .scrolled {
+    display: none;
   }
 }
 
