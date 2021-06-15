@@ -388,3 +388,9 @@ footer h1::before {
 .show > .btn-primary.dropdown-toggle:focus {
   box-shadow: none;
 }
+
+@media (max-width: 768px) {
+  footer h1::before {
+    margin-top: 15px;
+  }
+}
