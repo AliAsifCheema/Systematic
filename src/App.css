@@ -1,38 +1,390 @@
-.App {
-  text-align: center;
+:root {
+  --primary: #a01b1b;
+  --secondary: #e47816;
+  --third: grey;
+  --white: #ffffff;
+  --black: #000000;
+}
+/*--------------------------------888-----------------------------------------------------
+    Navbar Static CSS
+---------------------------------------------------------------------------------------*/
+.nav1 {
+  background-color: var(--primary);
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav1 ul li a {
+  color: var(--white);
+  padding: 0 10px;
+  font-size: 18px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav1 ul li a::after {
+  position: absolute;
+  content: "";
+  top: -6px;
+  width: 2px;
+  margin: 10px;
+  height: 18px;
+  background-color: var(--white);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav1 ul li .display::after {
+  display: none;
+}
+
+.nav1 form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  border: 1px solid var(--white);
+  background-color: var(--white);
+  margin-left: auto;
+  border-radius: 30px;
+  padding: 0px 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.nav1 input {
+  flex-grow: 2;
+  background: none;
+  width: 80% !important;
+  border-radius: 30px;
+  border: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav1 input:focus {
+  outline: none;
+}
+
+.nav1 button {
+  padding: 3px;
+  width: 30px;
+  margin: 0;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--white);
+}
+
+.nav1 .btn:hover {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.form-control:focus {
+  border: none;
+  box-shadow: none;
+}
+
+@media (min-width: 1210px) {
+  .nav1 form {
+    width: 61%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 768px) and (min-width: 450px) {
+  .nav1 form {
+    width: 60%;
   }
+}
+
+@media (max-width: 290px) {
+  .nav1 ul li a::after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav1 {
+    text-align: center;
+  }
+  .nav1 form {
+    margin: auto;
+  }
+}
+
+/*--------------------------------888-----------------------------------------------------
+  Systematic Head Section CSS
+---------------------------------------------------------------------------------------*/
+.sys-head .sys-title h1 {
+  font-size: 75px;
+  font-weight: 500;
+  letter-spacing: -5px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.sys-head .sys-title h2 {
+  font-size: 60px;
+  display: inline-block;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+}
+
+.sys-head .sys-title p {
+  color: var(--black);
+  font-size: 20px;
+}
+
+.social-links {
+  text-align: right;
+}
+
+.social li {
+  display: inline-block;
+  margin-right: 10px;
+  padding-bottom: 20px;
+}
+
+.social li a {
+  color: var(--white);
+  height: 50px;
+  width: 50px;
+  line-height: 30px;
+  text-align: center;
+  background: var(--black);
+  border: 1px solid var(--black);
+  border-radius: 100%;
+  display: block;
+  font-size: 20px;
+}
+.social li a:hover {
+  border-color: var(--secondary);
+  background: var(--secondary);
+}
+
+.m-13 {
+  margin: 13px;
+}
+
+@media (max-width: 768px) {
+  .sys-head,
+  .social-links {
+    text-align: center !important;
+  }
+}
+
+/*--------------------------------888-----------------------------------------------------
+    Navbar Home CSS
+---------------------------------------------------------------------------------------*/
+.navbar {
+  transition: all 0.35s ease;
+  border-radius: 10px;
+  padding: 10px 60px;
+  text-align: center;
+  background: var(--black);
+}
+.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  border-radius: 0;
+  transition: all 0.35s ease;
+  background-color: var(--black);
+}
+
+.navbar-links .nav-link {
+  font-size: 20px;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.navbar-links .nav-link:hover {
+  color: var(--primary);
+}
+
+/*--------------------------------888-----------------------------------------------------
+    Main Content CSS
+---------------------------------------------------------------------------------------*/
+.main-content {
+  margin: 0 65px;
+}
+
+.huge-title span {
+  font-size: 118px;
+  line-height: normal;
+  letter-spacing: -3px;
+}
+
+.main-content p {
+  font-size: 22px;
+}
+
+.readmore {
+  color: var(--primary);
+  font-size: 18px;
+  margin-left: auto;
+  text-transform: uppercase;
+}
+
+.readmore:hover {
+  color: var(--primary);
+}
+
+/*--------------------------------888-----------------------------------------------------
+    About US CSS
+---------------------------------------------------------------------------------------*/
+.middle-section .about p {
+  font-size: 18px;
+}
+
+.mediaImg {
+  width: 20%;
+}
+.clientImg {
+  width: 15%;
+}
+
+.clients .media-body span {
+  color: var(--third);
+}
+
+.clients p {
+  font-size: 18px;
+}
+
+.media h4 {
+  margin-bottom: 0;
+}
+
+/*--------------------------------888-----------------------------------------------------
+    Footer CSS
+---------------------------------------------------------------------------------------*/
+.tweets .username {
+  color: var(--primary);
+  display: block;
+  font-size: 20px;
+}
+
+.tweets .username p {
+  display: inline;
+}
+
+footer h1::before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  width: 80%;
+  margin-bottom: 20px;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.37);
+}
+
+.pt-30 {
+  padding-top: 30px;
+}
+
+.quick_links ul li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.322);
+  width: 85%;
+}
+
+.quick_links ul li a {
+  font-size: 16px;
+}
+
+.quick_links ul li a:hover {
+  color: var(--primary);
+}
+
+.blog h4 {
+  margin-bottom: 0;
+  line-height: 20px;
+}
+
+.blog h6 {
+  font-size: 13px;
+  margin-top: 0;
+  line-height: 12px;
+  margin-bottom: 0;
+}
+
+.blog p {
+  line-height: 15px;
+  font-size: 16px;
+}
+
+.copyright {
+  padding: 34px 25px;
+}
+
+.copy-org {
+  text-align: right;
+}
+
+.copyright p {
+  margin-bottom: 0;
+  font-size: 18px;
+  color: #00000073;
+}
+
+@media (max-width: 768px) {
+  .copy-org,
+  .copy-text {
+    text-align: center;
+  }
+}
+
+.contact-form input {
+  border: none;
+  background: #f8f9fa;
+  border-radius: 6px;
+  height: calc(1.9em + 0.75rem + 2px);
+}
+
+.contact-form textarea {
+  border: none;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.contact-form .btn-primary {
+  border: none;
+  background: #f8f9fa;
+  border-radius: 6px;
+  font-size: 22px;
+  text-transform: lowercase;
+  color: var(--primary);
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+  color: var(--white);
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.contact-form .btn-primary {
+  border: none;
+  background: #f8f9fa;
+  border-radius: 6px;
+  font-size: 22px;
+  text-transform: lowercase;
+  color: var(--primary);
+}
+
+.contact-form .btn:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.btn-primary.focus,
+.btn-primary:focus {
+  color: var(--white);
+  background-color: var(--primary);
+  border-color: var(--primary);
+  box-shadow: none;
+}
+.btn.focus,
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
 }
